@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # User input, you potentially need to update or change this values during your installation
+# Need to look at the latest values here : https://wiki.linuxfoundation.org/realtime/start
+# and then https://cdn.kernel.org/pub/linux/kernel/projects/rt/5.15/    to change the values below as per the version listed 5.15.107 rt62
 VERSION_MAJOR=5
-VERSION_SECOND=14
-VERSION_MINOR=2
+VERSION_SECOND=15
+VERSION_MINOR=107
 VERSION=$VERSION_MAJOR.$VERSION_SECOND.$VERSION_MINOR
-VERSION_PATCH=$VERSION-rt21
+VERSION_PATCH=$VERSION-rt62
 DEFAULT_CONFIG=/boot/config-$(uname -r)
 
 if [  ! -f  $DEFAULT_CONFIG ]; then
